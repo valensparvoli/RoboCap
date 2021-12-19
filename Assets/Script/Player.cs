@@ -37,11 +37,14 @@ public class Player : MonoBehaviour
     public GameObject btn2;
     public GameObject btn3;
 
+    //
+    public AudioClip coin;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         score = 0;
+        
     }
     private void Awake()
     {
@@ -135,7 +138,9 @@ public class Player : MonoBehaviour
         {
             score += 1;
             Destroy(collision.gameObject);
-            
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+
         }
         if (collision.collider.CompareTag("Obj"))
         {

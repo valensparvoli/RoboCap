@@ -20,5 +20,6 @@ public class Point : MonoBehaviour
     public void LevelSelection()
     {
         SceneManager.LoadScene("00_LevelSelection00");
+        Debug.Log("dd");
     }
 }

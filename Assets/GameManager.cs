@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     {
         playerTransform.position = spawnPoint.position;
         pauseMenu.SetActive(false);
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().PlayMusic();
     }
 
     void Update()
